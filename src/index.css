@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+    @apply text-white relative after:content-['']  after:absolute after:block after:w-full after:h-[2px] after:bg-white after:mt-[2px];
+}
+
+.container {
+    @apply mx-auto w-11/12;
+}
