@@ -39,6 +39,7 @@ export default function Login() {
                 console.log(res.data.user.name);
                 setUserName(res.data.user.name)
                 localStorage.setItem("token", res.data.token)
+                verfiyUser()
                 navigate(location.pathname == "/login" ? "/" : location.pathname);
             }).catch((err) => {
                 console.log(err.response.data.message);
@@ -57,6 +58,23 @@ export default function Login() {
             password: Yup.string().required("Password is Required").min(8, "Too short").max(50, "Too long"),
         }),
     });
+
+
+    function verfiyUser() {
+        axios.get(`${baseUrl}/api/v1/auth/verifyToken`, {
+            headers: {
+                token: localStorage.getItem("token")
+            }
+        }).then((res) => {
+            console.log(res);
+            
+            localStorage.setItem('userId', res.data.decoded.id);
+
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
+
     return (
         <>
             <div className=" container ">
