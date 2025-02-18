@@ -178,7 +178,7 @@ export default function Address() {
                 <div className=" mt-14  ">
                     <form onSubmit={formik.handleSubmit} className=" max-w-screen-sm m-auto grid grid-cols-2 gap-5 mt-10 shadow-xl border-black border-opacity-20 border-2 p-5 rounded-2xl" >
                         <h1 className="sm:text-3xl text-2xl col-span-2  font-bold text-center mb-6 text-gray-800">
-                            Create Your Account
+                            Create Your Order
                         </h1>
 
                         <Textarea isInvalid={formik.touched.details && formik.errors.details} errorMessage={formik.errors.details} onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.details} name="details" variant="bordered" className="col-span-2" label="Details" type="text" />
