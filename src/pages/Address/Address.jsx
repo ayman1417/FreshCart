@@ -91,7 +91,7 @@ export default function Address() {
             },
             params:
             {
-                url: "https://fresh-cart-two-pink.vercel.app/"
+                url: "https://fresh-cart-two-pink.vercel.app/#/"
             }
         }
             ,
