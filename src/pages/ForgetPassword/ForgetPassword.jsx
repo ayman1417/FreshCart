@@ -18,7 +18,7 @@ export default function ForgetPassword() {
 
     const formik = useFormik({
         initialValues: {
-            email: "ao741003@gmail.com",
+            email: "",
         },
         onSubmit: () => {
             setIsLoad(true);
