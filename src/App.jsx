@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import "./App.css";
 // import NavBar from "./Components/Navbar/Navbar";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
@@ -32,7 +32,7 @@ import UserOrders from "./pages/UserOrders/UserOrders";
 import ProductsBrand from "./pages/Products/ProductsBrand";
 import ProductsCategory from "./pages/Products/ProductsCategory";
 import { motion } from "framer-motion";
-const router = createBrowserRouter([{
+const router = createHashRouter([{
   path: "", element: <Layout />, children: [
     { index: true, element: <RouteGuard><Home /></RouteGuard> },
     { path: "home", element: <Navigate to={"/"} /> },
